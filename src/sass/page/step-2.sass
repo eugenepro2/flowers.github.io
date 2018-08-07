@@ -1,0 +1,195 @@
+.step-2
+  .container
+    max-width: 960px
+  h1
+    margin-top: 60px
+    font-size: 18px
+    font-weight: normal
+    letter-spacing: 1.8px
+    color: $black
+    padding-left: 20px
+    text-transform: uppercase
+  &__container
+    border-radius: 5px
+    background-color: $white
+    box-shadow: 0 20px 43px 0 rgba(230, 233, 240, 0.62)
+    padding: 10px
+    margin: 40px 0
+    +r(767)
+      margin: 20px 0
+    &__content
+      border-radius: 5px
+      border: solid 1px #fad0dc
+      +center
+      +r(767)
+        flex-direction: column
+    &__block
+      width: 100%
+      +center
+      padding: 25px 0
+      &--secondary
+        border-radius: 5px
+        background-color: $pale-grey
+      p
+        font-size: 14px
+        font-weight: 500
+        color: $black
+  .form
+    padding-bottom: 85px
+    flex: 1
+    margin-right: 90px
+    +r(1024)
+      margin-right: 0
+    +r(767)
+      padding-bottom: 40px
+    h2
+      font-size: 14px
+      color: $black
+      padding: 10px 0 20px
+      font-weight: normal
+    &__input
+      input
+        font-size: 14px
+        font-weight: normal
+        color: $steel
+        +placeholder-color($steel)
+        border-radius: 30px
+        border: solid 1px $steel
+        padding: 20px 30px
+        width: calc(100% - 10px)
+        margin-right: 10px
+        margin-bottom: 20px
+        +r(767)
+          width: 100%
+          margin-right: 0
+    &__select
+      .selectize-input
+        border-radius: 30px
+        border: solid 1px $steel
+        padding: 20px 30px
+      .selectize-input.items.has-options.full.has-items:after
+        top: 42%
+      .selectize-dropdown
+        top: 70px !important
+    &__radio
+      margin-bottom: 50px
+      margin-top: 10px
+      +r(767)
+        margin-bottom: 20px
+      input
+        display: none
+        & + label
+          border-radius: 5px
+          border: solid 1px #fad0dc
+          +tr
+          height: 130px
+          width: calc(100% - 10px)
+          margin-right: 10px
+          +center
+          padding: 40px
+          +r(767)
+            margin-bottom: 20px
+            padding: 25px
+          span
+            font-size: 14px
+            color: $black
+            margin-left: 20px
+            display: inline-block
+        &:checked + label
+          background: $very-light-purple
+    &__checkbox
+      margin-bottom: 30px
+      input
+        display: none
+        & + label
+          font-size: 12px
+          font-weight: normal
+          color: $cool-grey
+          position: relative
+          padding-left: 40px
+          a
+            text-decoration: underline
+            color: $cool-grey
+          &:before
+            content: ''
+            width: 17px
+            height: 17px
+            border-radius: 100%
+            +center
+            position: absolute
+            left: 0
+            top: 0
+            font-family: 'iconfont'
+            color: $white
+            border: 1px solid $pale-rose
+            +tr
+        &:checked + label:before
+          content: $icon-check-mark
+          color: $pale-rose
+          font-size: 17px
+          +tr
+    .btn
+      font-size: 14px
+      font-weight: 500
+      padding: 20px 50px
+  &__content
+    display: flex
+    +r(1024)
+      flex-direction: column-reverse
+  &__info
+    background-image: url('../img/step-2.png')
+    background-size: 240px 100%
+    width: 240px
+    height: auto
+    padding: 30px 50px
+    box-shadow: 0 20px 43px 0 rgba(230, 233, 240, 0.62)
+    +r(1024)
+      position: relative
+      left: 50%
+      transform: translate(-50%)
+      margin-bottom: 40px
+    h2
+      font-size: 14px
+      font-weight: 500
+      text-align: center
+      color: $black
+      position: relative
+      margin-bottom: 25px
+      &:before, &:after
+        content: ''
+        height: 1px
+        position: absolute
+        left: 50%
+        bottom: -10px
+        transform: translate(-50%)
+      &:before
+        width: 130px
+        background: $silver
+      &:after
+        height: 2px
+        background: $pale-rose
+        width: 70px
+        bottom: -10.5px
+        border-radius: 3px
+    p
+      font-size: 11px
+      text-align: center
+      color: $black
+    span
+      font-size: 20px
+      text-align: center
+      color: $black
+      display: block
+      padding: 6px 0
+    &__total
+      margin-top: 25px
+      position: relative
+      &:before
+        content: ''
+        width: 110px
+        height: 1px
+        background: $silver
+        position: absolute
+        top: -10px
+        left: 50%
+        transform: translate(-50%)

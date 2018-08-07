@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="89px" height="53px" viewBox="0 0 89 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>mini</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Главная(life4_soul)" transform="translate(-263.000000, -562.000000)">
+            <g id="Форма" transform="translate(203.000000, 389.000000)">
+                <g id="mini" transform="translate(61.000000, 170.000000)">
+                    <text font-family=".AppleSystemUIFont" font-size="14" font-weight="normal" fill="#748C88">
+                        <tspan x="27" y="32">mini</tspan>
+                    </text>
+                    <path d="M84,14.8847135 C72.8880074,35.6494229 60.8525207,48.6196688 47.89354,53.7954515 C34.9345592,58.9712341 22.3187531,55.0333392 10.0461218,41.9817667 C9.40182491,23.3650379 15.5078861,12.0204984 28.3643055,7.94814818 C41.2207249,3.87579792 59.7659564,6.18798638 84,14.8847135 Z" id="Path-3" stroke="#748C88" stroke-width="2" fill="#748C88" stroke-linecap="round" transform="translate(47.000000, 31.000000) rotate(9.000000) translate(-47.000000, -31.000000) "></path>
+                    <path d="M1,42 C2.86833366,40.0811369 4.71709974,38.4909598 6.54629825,37.2294688 C8.37549676,35.9679777 11.5267307,34.5581548 16,33" id="Path-4" stroke="#748C88" stroke-width="2" stroke-linecap="round" transform="translate(8.500000, 37.500000) rotate(9.000000) translate(-8.500000, -37.500000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

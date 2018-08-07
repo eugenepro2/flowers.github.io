@@ -1,0 +1,16 @@
+- var svgSprite = 'img/sprite.svg'
+
+mixin icon(name,mod)
+  - mod = mod || ''
+  svg(class="icon icon-" + name + ' ' + mod)
+    use(xlink:href="../img/sprite.svg#icon-" + name)
+
+
+mixin breadcrumbs(items)
+  .breadcrumbs
+    .container
+      ul
+        each item in items
+          li
+            a(href="#")= item
+              i.icon.icon-right-arrow

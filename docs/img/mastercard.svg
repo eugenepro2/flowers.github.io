@@ -1,0 +1,14 @@
+<svg width="44" height="28" viewBox="0 0 44 28" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        icons8-Ð»Ð¾Ð³Ð¾ÑÐ¸Ð¿-mastercard
+    </title>
+    <g transform="translate(-243 -980)" fill="none" fill-rule="evenodd">
+        <rect fill="#FDF0F4" x="203" y="949" width="283" height="129" rx="5"/>
+        <rect stroke="#FAD0DC" x="203.5" y="948.5" width="282" height="130" rx="5"/>
+        <g transform="translate(243 980)" fill-rule="nonzero">
+            <circle fill="#FF9800" cx="30" cy="14" r="14"/>
+            <circle fill="#D50000" cx="14" cy="14" r="14"/>
+            <path d="M16 14c0 4.755 2.376 8.95 6 11.48 3.624-2.53 6-6.725 6-11.48 0-4.755-2.376-8.95-6-11.48-3.624 2.53-6 6.725-6 11.48z" fill="#FF3D00"/>
+        </g>
+    </g>
+</svg>

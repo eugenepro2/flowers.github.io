@@ -1,0 +1,76 @@
+---
+title: Оформление заказа. Шаг 2
+---
+extends layouts/_layout
+block content
+  .step-2
+    .container
+      h1 Оформление заказа
+      .step-2__container
+        .step-2__container__content
+          .step-2__container__block
+            p Шаг 1. Выбор тарифа 
+          .step-2__container__block.step-2__container__block--secondary
+            p Шаг 2. Доставка и оплата 
+          .step-2__container__block
+            p Шаг 3. Подтверждение
+      .step-2__content
+        form.form
+          .form__input
+            h2 Введите контактные данные:
+            .row
+              .col-sm-6.col-xs-12
+                input(type="text" name="name" placeholder="Имя")
+              .col-sm-6.col-xs-12
+                input(type="text" placeholder="Фамилия")
+              .col-sm-6.col-xs-12
+                input(type="tel" name="phone" placeholder="Телефон")
+              .col-sm-6.col-xs-12
+                input(type="email" name="e-mail" placeholder="E-mail")
+              .col-sm-9.col-xs-12
+                input(type="text" name="adres" placeholder="Адрес: Улица, дом / корпус")
+              .col-sm-3.col-xs-12
+                input(type="text" placeholder="Квартира")
+            h2 Выберите желаемую дату 1-й доставки:
+            .row
+              .col-sm-6.col-xs-12
+                .form__select
+                  select
+                    option(value="1") 01. 07. 18
+                    option(value="2") 02. 07. 18
+                    option(value="3") 03. 07. 18
+            h2 Комментарий к заказу:
+            .row
+              .col-xs-12
+                input(type="text" placeholder="Например: «Домофон 15», «При входе нажать К1» и т.д.")
+          h2 Выберите способ оплаты: 
+          .form__radio
+            .row
+              .col-sm-6.col-xs-12
+                input(type="radio" name="radio1" id="radio2" checked)
+                label(for="radio2")
+                  .form__img
+                    img(src="img/mastercard.svg", alt="")
+                    img(src="img/visa.svg", alt="")
+                  span Банковской картой на сайте (Visa, MasterCard)
+              .col-sm-6.col-xs-12
+                input(type="radio" name="radio1" id="radio3")
+                label(for="radio3")
+                  .form__img
+                    img(src="img/money.svg", alt="")
+                  span Наличными курьеру при получении
+          .form__checkbox
+            input(type="checkbox" name="checkbox" id="checkbox" checked)
+            label(for="checkbox") Я прочитал и согласен 
+              a(href="#") с условиями оформления и оплаты заказа 
+              | на сайте life4soul.ru
+          input(type="submit" value="Оформить (8 500₽)").btn.btn--secondary
+        aside.aside
+          .step-2__info
+            h2 Ваш заказ
+            p Абонемент «Авторский букет MINI» на
+            span 1 месяц
+            p 4 бесплатных доставки до двери
+            .step-2__info__total
+              p Итого:
+              span 8 500₽

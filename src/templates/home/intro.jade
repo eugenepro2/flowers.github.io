@@ -1,0 +1,48 @@
+section.intro
+  .container
+    h1 Авторские букеты для любимых
+  .swiper-container.swiper-intro.hidden-xs
+    .swiper-wrapper
+      .swiper-slide(style="background-image: url('img/intro__img-1.png')")
+      .swiper-slide(style="background-image: url('img/intro__img-1.png')")
+    .container
+      .swiper-button-next.swiper-intro-next
+        i.icon.icon-left-arrow
+      .swiper-button-prev.swiper-intro-prev
+        i.icon.icon-left-arrow
+  .container
+    .intro__block
+      .intro__block__content
+        .intro__block__info
+          a(href="#").i
+            i.icon.icon-i
+        .intro__block__details.details
+          p Букет MINI cостоит из 8-10 бутонов
+          p Букет MAXI cостоит из 15-20 бутонов
+        h2 Оформите абонемент
+        h3 на еженедельную доставку цветов 
+        .swiper-container.swiper-intro.hidden-sm.hidden-md
+          .swiper-wrapper
+            .swiper-slide
+              .slide__img
+                img(src="img/intro__mob__img-1.png", alt="")
+            .swiper-slide
+              .slide__img
+                img(src="img/intro__mob__img-1.png", alt="")
+              p maxi
+            .swiper-slide
+              .slide__img
+                img(src="img/intro__mob__img-1.png", alt="")
+            .swiper-slide
+              .slide__img
+                img(src="img/intro__mob__img-1.png", alt="")
+        p Выберите размер букета:
+        .intro__block__radio
+          input(type="radio" name="radio" id="radio")
+          label(for="radio") mini
+          input(type="radio" name="radio" id="radio1" checked)
+          label(for="radio1") maxi
+        b за букет 
+        span 1200₽
+          b 4800₽/месяц
+        a(href="#").btn.btn--secondary Оформить абонемент

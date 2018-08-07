@@ -1,0 +1,81 @@
+.header
+  height: 140px
+  background: $white
+  z-index: 10
+  position: relative
+  +r(767)
+    height: 80px
+  .container-fluid
+    padding: 0
+  .menu-open
+    height: 25px
+    width: 30px
+    position: absolute
+    top: 20px
+    right: 25px
+    +center
+    span
+      display: block
+      width: 30px
+      height: 2px
+      background: $pale-rose
+      border-radius: 2px
+      position: relative
+      &:before, &:after
+        content: ''
+        position: absolute
+        left: 0
+        width: 30px
+        height: 2px
+        background: $pale-rose
+        border-radius: 2px
+        top: -8px
+      &:after
+        width: 20px
+        bottom: -8px
+        top: auto
+  &__social
+    ul
+      display: flex
+      a
+        width: 50px
+        height: 50px
+        border: solid 1px #fad0dc
+        border-radius: 100%
+        +center
+        margin-right: 10px
+        i
+          font-size: 18px
+          color: $pale-rose
+        &:hover
+          box-shadow: 0 20px 43px 0 rgba(230, 233, 240, 0.62)
+  &__logo
+    height: 200px
+    width: 270px
+    background: $white
+    border-radius: 100%
+    +center
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translate(-50%)
+    +r(767)
+      height: 110px
+      width: 180px
+    img
+      position: relative
+      top: -15px
+      +r(767)
+        width: 90px
+        top: -5px
+  &__phone
+    +center-column
+    width: 165px
+    position: relative
+    left: 100%
+    transform: translate(-100%)
+    a:first-child
+      font-size: 18px
+      font-weight: 500
+      color: $greyish-brown
+      margin-bottom: 10px
