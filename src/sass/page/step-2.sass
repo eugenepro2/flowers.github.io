@@ -9,6 +9,10 @@
     color: $black
     padding-left: 20px
     text-transform: uppercase
+    +r(767)
+      padding-left: 0
+    span
+      display: block
   &__container
     border-radius: 5px
     background-color: $white
@@ -47,6 +51,9 @@
       color: $black
       padding: 10px 0 20px
       font-weight: normal
+      +r(767)
+        padding-left: 10px
+        padding-bottom: 30px
     &__input
       input
         font-size: 14px
@@ -63,6 +70,8 @@
           width: 100%
           margin-right: 0
     &__select
+      +r(767)
+        margin-bottom: 20px
       .selectize-input
         border-radius: 30px
         border: solid 1px $steel
@@ -76,6 +85,7 @@
       margin-top: 10px
       +r(767)
         margin-bottom: 20px
+        margin-top: 0
       input
         display: none
         & + label
@@ -90,6 +100,8 @@
           +r(767)
             margin-bottom: 20px
             padding: 25px
+            margin-right: 0
+            width: 100%
           span
             font-size: 14px
             color: $black
@@ -107,6 +119,7 @@
           color: $cool-grey
           position: relative
           padding-left: 40px
+          display: block
           a
             text-decoration: underline
             color: $cool-grey
@@ -132,6 +145,9 @@
       font-size: 14px
       font-weight: 500
       padding: 20px 50px
+      +r(767)
+        padding: 20px 0
+        width: 100%
   &__content
     display: flex
     +r(1024)

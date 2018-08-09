@@ -5,6 +5,9 @@
   position: relative
   +r(767)
     height: 80px
+    z-index: 999
+  &.active
+    height: 110px
   .container-fluid
     padding: 0
   .menu-open
@@ -21,6 +24,7 @@
       background: $pale-rose
       border-radius: 2px
       position: relative
+      +tr
       &:before, &:after
         content: ''
         position: absolute
@@ -29,11 +33,25 @@
         height: 2px
         background: $pale-rose
         border-radius: 2px
+        transition: all 0.6s
         top: -8px
       &:after
         width: 20px
         bottom: -8px
         top: auto
+    &.active
+      right: 40px
+      span
+        width: 0
+        &:before
+          transform: rotate(225deg)
+          right: 0
+          top: 0
+        &:after
+          transform: rotate(-225deg)
+          width: 30px
+          left: 0
+          top: 0
   &__social
     ul
       display: flex
@@ -47,8 +65,11 @@
         i
           font-size: 18px
           color: $pale-rose
+          +tr
         &:hover
-          box-shadow: 0 20px 43px 0 rgba(230, 233, 240, 0.62)
+          background: $pale-rose
+          i
+            color: $white
   &__logo
     height: 200px
     width: 270px

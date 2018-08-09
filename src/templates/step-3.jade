@@ -4,52 +4,57 @@ title: Оформление заказа. Шаг 3
 extends layouts/_layout
 block content
   .step-3
-    .container
+    .container.container-two
       .step-3__title
         h1 Иван иванов, спасибо за ваш заказ в life4soul flowers
         p В ближайшее время с Вами свяжется менеджер для уточнения заказа. 
         p Проверьте, пожалуйста, состав Вашего заказа, дату и адрес доставки:
-      .step-3__block
-        .step-3__block__content
-          h2 Ваш заказ №220298
-          table
-            tr
-              td Абонемент «Авторский букет MINI» 1 месяц
-              td 8 500₽
-            tr
-              td Доставка курьером
-              td 0₽
-            tr
-              th Итого:
-              th 8 500₽
-          .step-3__block__contacts
-            .row
-              .col-sm-5.col-xs-12
-                p Адрес:
-              .col-sm-7.col-xs-12
-                p г. Москва, ул. Полянка, д. 37
-            .row
-              .col-sm-5.col-xs-12
-                p Дата 1-й доставки:
-              .col-sm-7.col-xs-12
-                p 01.07.18
-            .row
-              .col-sm-5.col-xs-12
-                p Способ оплаты:
-              .col-sm-7.col-xs-12
-                p Банковской картой на сайте
-            .row
-              .col-sm-5.col-xs-12
-                p Телефон:
-              .col-sm-7.col-xs-12
-                a(href="tel:+79000000000") +7(900) 000-00-00
-            .row
-              .col-sm-5.col-xs-12
-                p E-mail:
-              .col-sm-7.col-xs-12
-                a(href="mailto:info@mail.ru") info@mail.ru
-            .row
-              .col-sm-5.col-xs-12
-                p Комментарий: 
-              .col-sm-7.col-xs-12
-                p (текст от клиента)
+      .step-3__content
+        .row.end-xs
+          .col-sm-6.col-xs-12.start-xs
+            .step-3__block
+              .step-3__block__content
+                h2 Ваш заказ №220298
+                table
+                  tr
+                    td Абонемент «Авторский букет MINI» 1 месяц
+                    td 8 500₽
+                  tr
+                    td Доставка курьером
+                    td 0₽
+                  tr
+                    th Итого:
+                    th 8 500₽
+                .step-3__block__contacts
+                  .row
+                    .col-sm-5.col-xs-12
+                      p Адрес:
+                    .col-sm-7.col-xs-12
+                      span г. Москва, ул. Полянка, д. 37
+                  .row
+                    .col-sm-5.col-xs-12
+                      p Дата 1-й доставки:
+                    .col-sm-7.col-xs-12
+                      span 01.07.18
+                  .row
+                    .col-sm-5.col-xs-12
+                      p Способ оплаты:
+                    .col-sm-7.col-xs-12
+                      span Банковской картой на сайте
+                  .row
+                    .col-sm-5.col-xs-12
+                      p Телефон:
+                    .col-sm-7.col-xs-12
+                      a(href="tel:+79000000000") +7(900) 000-00-00
+                  .row
+                    .col-sm-5.col-xs-12
+                      p E-mail:
+                    .col-sm-7.col-xs-12
+                      a(href="mailto:info@mail.ru") info@mail.ru
+                  .row
+                    .col-sm-5.col-xs-12
+                      p Комментарий: 
+                    .col-sm-7.col-xs-12
+                      span (текст от клиента)
+          .col-sm-3.col-xs-12
+            aside.aside

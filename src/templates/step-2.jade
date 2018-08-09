@@ -6,7 +6,8 @@ block content
   .step-2
     .container
       h1 Оформление заказа
-      .step-2__container
+        span.hidden-sm.hidden-md Шаг 2.
+      .step-2__container.hidden-xs
         .step-2__container__content
           .step-2__container__block
             p Шаг 1. Выбор тарифа 
@@ -27,6 +28,8 @@ block content
                 input(type="tel" name="phone" placeholder="Телефон")
               .col-sm-6.col-xs-12
                 input(type="email" name="e-mail" placeholder="E-mail")
+              .col-xs-12.hidden-sm.hidden-md
+                h2 Введите адрес доставки:
               .col-sm-9.col-xs-12
                 input(type="text" name="adres" placeholder="Адрес: Улица, дом / корпус")
               .col-sm-3.col-xs-12
@@ -39,8 +42,8 @@ block content
                     option(value="1") 01. 07. 18
                     option(value="2") 02. 07. 18
                     option(value="3") 03. 07. 18
-            h2 Комментарий к заказу:
-            .row
+            h2.hidden-xs Комментарий к заказу:
+            .row.hidden-xs
               .col-xs-12
                 input(type="text" placeholder="Например: «Домофон 15», «При входе нажать К1» и т.д.")
           h2 Выберите способ оплаты: 
@@ -65,7 +68,7 @@ block content
               a(href="#") с условиями оформления и оплаты заказа 
               | на сайте life4soul.ru
           input(type="submit" value="Оформить (8 500₽)").btn.btn--secondary
-        aside.aside
+        aside.aside.hidden-xs
           .step-2__info
             h2 Ваш заказ
             p Абонемент «Авторский букет MINI» на

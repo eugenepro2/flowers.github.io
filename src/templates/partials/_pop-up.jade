@@ -44,3 +44,27 @@
       span 8 500₽
       a(href="#").btn.btn--secondary Выбрать
   
+.call-order.modal#call-order
+  .call-order__content
+    h2 Мы Вам перезвоним!
+    p Оставь свои контактные данные и мы свяжемся с Вами в ближайшее время:
+    form.form
+      input(type="text" name="name" placeholder="Имя")
+      input(type="tel" name="phone" placeholder="Телефон")
+      .form__checkbox
+        input(type="checkbox" name="checkbox" id="checkbox" checked)
+        label(for="checkbox") Я прочитал и согласен 
+          a(href="#") с условиями оформления и оплаты заказа 
+          | на сайте life4soul.ru
+      a(href="#call-order-2" rel="modal:open").btn.btn--secondary Перезвонить
+    .footer.hidden-sm.hidden-md
+      .footer__content
+        .row.middle-xs
+          .col-sm-4.col-xs-6
+            p © 2018 life4soul_flowers
+          .col-sm-4.col-xs-6.end-xs
+            a(href="#").hidden-sm.hidden-md
+              img(src="img/excv.png", alt="")
+.call-order.call-order-2.modal#call-order-2
+  .call-order-2__content
+    p Спасибо, Ваши данные успешно отправлены!

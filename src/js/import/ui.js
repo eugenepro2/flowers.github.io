@@ -8,8 +8,14 @@ import modal from 'jquery-modal';
 $('.menu-open').on('click', function() {
   $(this).toggleClass('active');
   $('.header').toggleClass('active');
-  $('.body').fadeToggle();
-  $('.menu').fadeToggle();
+  setTimeout(function() {
+    if($('.menu-open').attr('rel') === 'modal:open') {
+      $('.menu-open').attr('rel', 'modal:close');
+    } else {
+      $('.menu-open').attr('rel', 'modal:open');
+    }
+  }, 500);
+
 });
 
 //select
@@ -26,5 +32,12 @@ $('a .icon.icon-i').on('click', function(event) {
     $(this).parent().parent().siblings('.details').addClass('active');
   } else {
     $(this).parent().parent().siblings('.details').addClass('active');
+  }
+});
+let heightPopUp = $('.call-order').height();
+
+$('.btn').on('click', function() {
+  if($(this).attr('href') === '#call-order-2') {
+    $('.call-order-2').height(heightPopUp);
   }
 });

@@ -24,6 +24,8 @@ body
 a
   text-decoration: none
   transition: all 0.3s
+label
+  cursor: pointer
 .flex
   display: flex
 
@@ -34,11 +36,15 @@ a
   border-radius: 100%
   height: 29px
   width: 29px
+  &:hover
+    i
+      color: #fc98b4
   i
     color: $pale-rose
     font-size: 30px
     background: $white
     border-radius: 100%
+    +tr
 
 
 .btn
@@ -48,14 +54,23 @@ a
   font-weight: 500
   border-radius: 30px
   border: solid 1px $pale-rose
+  +tr
+  -webkit-appearance: none
   &--primary
     color: $pale-rose
+    &:hover
+      border: solid 1px #fc98b4
+      color: $white
+      background: #fc98b4
   &--secondary
     color: $white
     background: $pale-rose
     font-size: 10px
     padding: 12px 20px
     box-shadow: 0 0 29px 0 rgba(133, 135, 142, 0.29)
+    &:hover
+      background: #fc98b4
+      border: solid 1px #fc98b4
 
 
 

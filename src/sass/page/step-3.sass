@@ -1,6 +1,9 @@
 .step-3
   &__title
     margin-top: 60px
+    +r(767)
+      padding: 0 5px
+      margin-top: 40px
     h1
       font-size: 18px
       font-weight: 500
@@ -10,7 +13,10 @@
       margin-bottom: 25px
       text-transform: uppercase
       +r(767)
-        font-size: 17px
+        font-size: 14px
+        text-transform: none
+        letter-spacing: normal
+        margin-bottom: 15px
     p
       font-size: 14px
       color: $black
@@ -18,24 +24,23 @@
       line-height: 1.7
       +r(767)
         font-size: 13px
+  &__content
+    margin-top: 45px
   &__block
     background-image: url('../img/step-3.png')
-    background-size: 510px 100%
+    background-repeat: no-repeat
     width: 510px
-    height: 100%
     padding: 50px 55px
     box-shadow: 0 20px 43px 0 rgba(230, 233, 240, 0.62)
     position: relative
     left: 50%
     transform: translate(-50%)
-    margin-top: 45px
     margin-bottom: 105px
     +r(550)
       background: none
       padding: 10px
       border-radius: 5px
       width: 100%
-      margin-top: 20px
       margin-bottom: 45px
       &__content
         border-radius: 5px
@@ -71,35 +76,52 @@
       display: flex
       justify-content: space-between
       align-items: center
+      +r(767)
+        flex-direction: column
+        align-items: flex-start
       &:last-child
         border-bottom: none
+        +r(767)
+          flex-direction: row
       td, th
         font-size: 14px
         color: $black
         max-width: 217px
         padding: 15px 0
         font-weight: 400
-        +r(550)
-          font-size: 12px
+        +r(767)
+          padding: 10px 0
         &:last-child
           font-size: 20px
           font-weight: 500
           +r(550)
-            font-size: 17px
-            width: 90px
             text-align: right
       th
         color: $pale-rose
         font-weight: 500
         font-size: 18px
-    p, a
+        +r(767)
+          padding: 20px 0
+    p, a, span
       font-size: 14px
       font-weight: normal
       color: $steel
       line-height: 1.8
+      +r(767)
+        line-height: 1
+    span, a
+      +r(767)
+        color: $black
     &__contacts
       padding-bottom: 20px
       +r(767)
         padding-bottom: 0
         .row
-          margin-bottom: 15px
+          margin-bottom: 20px
+  .aside
+    height: 260px
+    background: #E9EBF2
+    margin-top: 10px
+    +r(767)
+      margin-top: 0
+      margin-bottom: 40px
