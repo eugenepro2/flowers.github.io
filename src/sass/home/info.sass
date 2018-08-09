@@ -81,14 +81,15 @@
           top: -7px
           right: 20px
       .btn
-        position: absolute
-        left: 50%
-        transform: translate(-50%)
-        bottom: -23px
-        font-size: 14px
-        width: 89%
-        +center
-        padding: 20px 0
+        +r(767)
+          position: absolute
+          left: 50%
+          transform: translate(-50%)
+          bottom: -23px
+          font-size: 14px
+          width: 89%
+          +center
+          padding: 20px 0
     &__details
       position: absolute
       bottom: -105px
@@ -103,9 +104,6 @@
       opacity: 0
       visibility: hidden
       +tr
-      &.active
-        opacity: 1
-        visibility: visible
       &:before
         content: ''
         position: absolute
@@ -133,3 +131,6 @@
           font-style: italic
           color: $gunmetal
           margin-bottom: 10px
+          height: auto
+          border: none
+          text-align: left

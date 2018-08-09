@@ -16,11 +16,11 @@ section.intro
         .intro__block__info
           a(href="#").i
             i.icon.icon-i
-        .intro__block__details.details
-          p Букет MINI cостоит из 8-10 бутонов
-          p Букет MAXI cостоит из 15-20 бутонов
-        h2 Оформите абонемент
-        h3 на еженедельную доставку цветов 
+          .intro__block__details.details
+            p Букет MINI cостоит из 8-10 бутонов
+            p Букет MAXI cостоит из 15-20 бутонов
+          h2 Оформите абонемент
+          h3 на еженедельную доставку цветов 
         .swiper-container.swiper-intro.hidden-sm.hidden-md
           .swiper-wrapper
             .swiper-slide
@@ -39,11 +39,11 @@ section.intro
         p Выберите размер букета:
         .intro__block__radio
           input(type="radio" name="radio" id="radio")
-          label(for="radio") mini
+          label(for="radio" data-sum="600").min mini
           input(type="radio" name="radio" id="radio1" checked)
-          label(for="radio1") maxi
+          label(for="radio1" data-sum="1200").max maxi
         b за букет 
-        span 1200₽
-          b 4800₽/месяц
+        span.sum 1200₽
+        b.sum-month 4800₽/месяц
         a(href="#step-1" rel="modal:open").btn.btn--secondary.hidden-xs Оформить абонемент
         a(href="step-1.html").btn.btn--secondary.hidden-sm.hidden-md Оформить абонемент

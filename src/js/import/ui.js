@@ -2,6 +2,27 @@ import '../lib/selectize.min.js';
 import '../lib/maskedinput.js';
 import modal from 'jquery-modal';
 
+//pop-up
+$('[rel="modal:open"]').on('click', function(event) {
+  $(this).modal({
+    fadeDuration: 200
+  });
+  return false;
+});
+
+
+//min - max
+$('.min').on('click', function() {
+  let min = $(this).attr('data-sum');
+  $('.sum').text(min + '₽');
+  $('.sum-month').text((min * 4) + '₽/месяц');
+});
+$('.max').on('click', function() {
+  let max = $(this).attr('data-sum');
+  $('.sum').text(max + '₽');
+  $('.sum-month').text((max * 4) + '₽/месяц');
+});
+
 
 
 //menu open
@@ -22,18 +43,7 @@ $('.menu-open').on('click', function() {
 $('select').selectize();
 
 
-//i
-$('a .icon.icon-i').on('click', function(event) {
-  event.preventDefault();
-  if($(this).parent().parent().siblings('.details').hasClass('active')) {
-    $('.details').removeClass('active');
-  } else if($('.details').hasClass('active')) {
-    $('.details').removeClass('active');
-    $(this).parent().parent().siblings('.details').addClass('active');
-  } else {
-    $(this).parent().parent().siblings('.details').addClass('active');
-  }
-});
+
 let heightPopUp = $('.call-order').height();
 
 $('.btn').on('click', function() {
