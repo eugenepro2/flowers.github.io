@@ -72,7 +72,7 @@
           font-size: 14px
           height: 100%
           padding: 15px 11px
-      a.i
+      .i
         top: 55%
         transform: translate(0, -50%)
         right: -5px
@@ -104,6 +104,13 @@
       opacity: 0
       visibility: hidden
       +tr
+      +r(767)
+        width: 240px
+        bottom: 0
+      .btn
+        +r(767)
+          bottom: -25px
+          padding: 10px 20px
       &:before
         content: ''
         position: absolute
@@ -113,11 +120,16 @@
         border-bottom: 8px solid #E9EBF2
         border-right: 8px solid transparent
         display: block
+        +r(767)
+          right: 23px
       &__img
         height: 100px
         width: 100px
         border-radius: 3px
         overflow: hidden
+        +r(767)
+          height: 50px
+          width: 50px
         img
           +object-fit(cover)
           width: 100%
@@ -134,3 +146,6 @@
           height: auto
           border: none
           text-align: left
+          +r(767)
+            font-size: 10px
+            padding-bottom: 0 !important

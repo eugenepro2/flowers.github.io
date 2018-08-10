@@ -51,7 +51,7 @@
         padding: 25px 18px
         padding-bottom: 40px
     &__info
-      a.i
+      .i
         top: 60px
         right: -3px
         +r(767)
@@ -69,6 +69,11 @@
       width: 190px
       height: 105px
       padding: 0 20px
+      +r(767)
+        background: #fc98b4
+        right: 0
+        z-index: 9
+        top: 35px
       &:before
         position: absolute
         left: -8px
@@ -78,6 +83,14 @@
         border-top: 8px solid transparent
         border-right: 8px solid $white-70
         border-bottom: 8px solid transparent
+        +r(767)
+          border-left: 8px solid transparent
+          border-bottom: 8px solid #fc98b4
+          border-right: 8px solid transparent
+          left: auto
+          right: 22px
+          top: -15px
+          transform: none
       p
         font-size: 12px !important
         font-weight: 500 !important
