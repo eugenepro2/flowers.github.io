@@ -69,17 +69,16 @@
         +r(767)
           width: 100%
           margin-right: 0
-    &__select
-      +r(767)
-        margin-bottom: 20px
-      .selectize-input
-        border-radius: 30px
-        border: solid 1px $steel
-        padding: 20px 30px
-      .selectize-input.items.has-options.full.has-items:after
-        top: 42%
-      .selectize-dropdown
-        top: 70px !important
+    &__datepicker
+      position: relative
+      label
+        position: absolute
+        top: 22px
+        right: 55px 
+        +r(767)
+          right: 40px
+        i
+          color: $steel
     &__radio
       margin-bottom: 50px
       margin-top: 10px

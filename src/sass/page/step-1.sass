@@ -54,6 +54,40 @@
     .i
       top: -15px
       right: -15px
+    .details
+      position: absolute
+      top: 25px
+      right: -60px
+      width: 200px
+      background: #fc98b4
+      +center
+      padding: 10px
+      border-radius: 3px
+      z-index: 2
+      opacity: 0
+      visibility: hidden
+      +tr
+      &:hover
+        opacity: 1
+        visibility: visible
+      &:before
+        content: ''
+        position: absolute
+        top: -7.5px
+        right: 50px
+        border-left: 8px solid transparent
+        border-bottom: 8px solid #fc98b4
+        border-right: 8px solid transparent
+        display: block
+      p
+        font-size: 11px
+        font-weight: normal
+        font-style: italic
+        color: $gunmetal
+        margin-bottom: 10px
+        height: auto
+        border: none
+        text-align: left
     h4
       font-size: 20px
       color: $black

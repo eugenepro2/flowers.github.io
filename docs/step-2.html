@@ -104,12 +104,11 @@
                 <h2>Выберите желаемую дату 1-й доставки:</h2>
                 <div class="row">
                   <div class="col-sm-6 col-xs-12">
-                    <div class="form__select">
-                      <select>
-                        <option value="1">01. 07. 18</option>
-                        <option value="2">02. 07. 18</option>
-                        <option value="3">03. 07. 18</option>
-                      </select>
+                    <div class="form__datepicker">
+                      <input type="text" id="datepicker" placeholder="01.07.2018" class="datepicker-here">
+                      <label for="datepicker">
+                        <i class="icon icon-down-arrow"></i>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -174,6 +173,9 @@
             <a href="#" class="i">
               <i class="icon icon-i"></i>
             </a>
+            <div class="step-1__block__details details">
+              <p>Подарочные сертификаты - на Цветы по подписке номиналом 1 или 3 месяца</p>
+            </div>
             <div class="step-1__block__header">
               <h4>1 месяц</h4>
               <div class="step-1__block__header__content">
@@ -191,6 +193,9 @@
             <a href="#" class="i">
               <i class="icon icon-i"></i>
             </a>
+            <div class="step-1__block__details details">
+              <p>Подарочные сертификаты - на Цветы по подписке номиналом 1 или 3 месяца</p>
+            </div>
             <div class="step-1__block__header">
               <h4>1 месяц</h4>
               <div class="step-1__block__header__content">
@@ -211,6 +216,9 @@
             <a href="#" class="i">
               <i class="icon icon-i"></i>
             </a>
+            <div class="step-1__block__details details">
+              <p>Подарочные сертификаты - на Цветы по подписке номиналом 1 или 3 месяца</p>
+            </div>
             <h4>Подарочный сертификат</h4>
             <div class="step-1__block__header__content">
               <img src="img/present.png" alt="">
@@ -230,6 +238,9 @@
         </div>
       </div>
       <div id="call-order" class="call-order modal">
+        <div class="call-order__p">
+          <p>Спасибо, Ваши данные успешно отправлены!</p>
+        </div>
         <div class="call-order__content">
           <h2>Мы Вам перезвоним!</h2>
           <p>Оставь свои контактные данные и мы свяжемся с Вами в ближайшее время:</p>
@@ -241,7 +252,7 @@
               <label for="checkbox">Я прочитал и согласен
                 <a href="#">с условиями оформления и оплаты заказа </a>на сайте life4soul.ru</label>
             </div>
-            <a href="#call-order-2" rel="modal:open" class="btn btn--secondary">Перезвонить</a>
+            <a href="#" class="dispatch btn btn--secondary">Перезвонить</a>
           </form>
           <div class="footer hidden-sm hidden-md">
             <div class="footer__content">
@@ -259,10 +270,8 @@
           </div>
         </div>
       </div>
-      <div id="call-order-2" class="call-order call-order-2 modal">
-        <div class="call-order-2__content">
-          <p>Спасибо, Ваши данные успешно отправлены!</p>
-        </div>
+      <div id="video" class="video modal">
+        <iframe src="https://www.youtube.com/embed/XFCg9Ojvqu0?ecver=2" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
       <footer class="footer">
         <div class="container container-two">

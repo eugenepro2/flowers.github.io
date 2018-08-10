@@ -38,6 +38,13 @@
   max-width: 400px
   +r(767)
     padding: 120px 25px 0
+  &.active
+    .call-order__p
+      +center
+      height: 100%
+  &__p
+    p
+      display: none
   &__content
     +r(767)
       overflow: hidden
@@ -119,8 +126,7 @@
       +r(767)
         padding: 20px 0
         width: 100%
-.call-order-2
-  &__content
-    +center
-    height: 100%
-    width: 100%
+.video
+  max-width: 80%
+  height: 90%
+  padding: 15px

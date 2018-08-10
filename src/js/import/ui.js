@@ -1,14 +1,8 @@
 import '../lib/selectize.min.js';
 import '../lib/maskedinput.js';
 import modal from 'jquery-modal';
+import datapicker from 'air-datepicker';
 
-//pop-up
-$('[rel="modal:open"]').on('click', function(event) {
-  $(this).modal({
-    fadeDuration: 200
-  });
-  return false;
-});
 
 
 //min - max
@@ -27,13 +21,16 @@ $('.max').on('click', function() {
 
 //menu open
 $('.menu-open').on('click', function() {
+  console.log('jjl');
   $(this).toggleClass('active');
   $('.header').toggleClass('active');
   setTimeout(function() {
     if($('.menu-open').attr('rel') === 'modal:open') {
       $('.menu-open').attr('rel', 'modal:close');
+      $('.menu-open').attr('href', '#close-modal');
     } else {
       $('.menu-open').attr('rel', 'modal:open');
+      $('.menu-open').attr('href', '#call-order');
     }
   }, 500);
 
@@ -46,8 +43,17 @@ $('select').selectize();
 
 let heightPopUp = $('.call-order').height();
 
-$('.btn').on('click', function() {
-  if($(this).attr('href') === '#call-order-2') {
-    $('.call-order-2').height(heightPopUp);
-  }
+$('.dispatch').on('click', function() {
+  $('.call-order').height(heightPopUp);
+  $('.call-order__content').fadeOut();
+  $('.call-order').addClass('active');
+  $('.call-order__p p').fadeIn();
+});
+
+//pop-up
+$('[rel="modal:open"]').on('click', function(event) {
+  $(this).modal({
+    fadeDuration: 200
+  });
+  return false;
 });
