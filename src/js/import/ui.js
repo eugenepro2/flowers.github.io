@@ -2,6 +2,7 @@ import '../lib/selectize.min.js';
 import '../lib/maskedinput.js';
 import modal from 'jquery-modal';
 import datapicker from 'air-datepicker';
+import '../lib/ahunter_suggest.js';
 
 //maskedinput
 $('.phone').mask('+7 (999) 999-9999');
@@ -60,3 +61,8 @@ $('[rel="modal:open"]').on('click', function(event) {
   });
   return false;
 });
+
+
+//адреса
+var options = { id : 'js-AddressField', ahunter_url : 'https://ahunter.ru/', };
+AhunterSuggest.Address.Solid( options );

@@ -56,6 +56,15 @@
       +r(767)
         height: 100%
       &--secondary
+        .details
+          left: 54%
+          width: 315px
+          +r(767)
+            width: 240px
+            bottom: 0
+            top: auto
+        .info__block__details__text
+          padding-left: 16px
         +r(767)
           p
             padding-bottom: 40px !important
@@ -93,9 +102,9 @@
     &__details
       position: absolute
       top: 80px
-      left: 54%
+      left: 75%
       transform: translate(-50%)
-      width: 315px
+      width: 215px
       background: #E9EBF2
       +center
       padding: 10px
@@ -104,9 +113,6 @@
       opacity: 0
       visibility: hidden
       +tr
-      +r(767)
-        width: 240px
-        bottom: 0
       .btn
         +r(767)
           bottom: -25px
@@ -135,7 +141,6 @@
           width: 100%
           height: 100%
       &__text
-        padding-left: 16px
         flex: 1
         p
           font-size: 11px
