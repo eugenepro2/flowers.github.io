@@ -65,5 +65,6 @@ $('[rel="modal:open"]').on('click', function(event) {
 
 var autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'), {
   language: 'ru',
-  componentRestrictions: {country: 'ru'}
+  // componentRestrictions: {country: 'ru'}
+  componentRestrictions: {}
 });
