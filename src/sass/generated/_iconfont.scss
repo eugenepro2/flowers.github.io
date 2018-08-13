@@ -9,14 +9,16 @@
   font-style: normal;
 }
 
-$icon-check-mark: "\EA01";
-$icon-down-arrow: "\EA02";
-$icon-fb: "\EA03";
-$icon-i: "\EA04";
-$icon-instagram: "\EA05";
-$icon-left-arrow: "\EA06";
-$icon-play: "\EA07";
-$icon-vk: "\EA08";
+$icon-bouquet: "\EA01";
+$icon-check-mark: "\EA02";
+$icon-down-arrow: "\EA03";
+$icon-fb: "\EA04";
+$icon-i: "\EA05";
+$icon-instagram: "\EA06";
+$icon-left-arrow: "\EA07";
+$icon-play: "\EA08";
+$icon-present: "\EA09";
+$icon-vk: "\EA0A";
 
 
 %icon {
@@ -35,6 +37,7 @@ $icon-vk: "\EA08";
   display: inline-block;
 }
 
+.icon-bouquet:before { content: $icon-bouquet; }
 .icon-check-mark:before { content: $icon-check-mark; }
 .icon-down-arrow:before { content: $icon-down-arrow; }
 .icon-fb:before { content: $icon-fb; }
@@ -42,4 +45,5 @@ $icon-vk: "\EA08";
 .icon-instagram:before { content: $icon-instagram; }
 .icon-left-arrow:before { content: $icon-left-arrow; }
 .icon-play:before { content: $icon-play; }
+.icon-present:before { content: $icon-present; }
 .icon-vk:before { content: $icon-vk; }

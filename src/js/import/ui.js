@@ -3,6 +3,9 @@ import '../lib/maskedinput.js';
 import modal from 'jquery-modal';
 import datapicker from 'air-datepicker';
 
+//maskedinput
+$('.phone').mask('+7 (999) 999-9999');
+
 
 
 //min - max

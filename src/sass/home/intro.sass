@@ -150,28 +150,19 @@
           font-weight: 500
           color: $steel-grey
           background-repeat: no-repeat
-          width: 86px
+          width: 90px
           +center
           height: 50px
-          padding-bottom: 5px
           background-image: url('../img/mini.svg')
           background-size: 90px 50px
           +tr
           &:nth-child(4)
-            padding-bottom: 0
-            padding-top: 5px
             background-image: url('../img/maxi.svg')
-            background-size: 90px 50px
-            background-repeat: no-repeat
         &:checked + label
-          background: url('../img/mini-checked.svg')
-          background-size: 90px 50px
-          background-repeat: no-repeat
+          background-image: url('../img/mini-checked.svg')
           color: $white
           &:nth-child(4)
-            background: url('../img/maxi-checked.svg')
-            background-size: 90px 50px
-            background-repeat: no-repeat
+            background-image: url('../img/maxi-checked.svg')
     b
       font-size: 10px
       color: $black
@@ -182,7 +173,7 @@
       display: block
       text-align: center
       font-size: 44px
-      font-weight: 500
+      font-weight: 400
       color: $black
     b.sum-month
       font-size: 14px

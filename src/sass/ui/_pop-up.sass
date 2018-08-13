@@ -55,6 +55,7 @@
     font-weight: normal
     color: $black
     margin-bottom: 20px
+    text-transform: uppercase
     +r(767)
       text-transform: uppercase
   p
@@ -78,6 +79,9 @@
       padding: 20px 30px
       width: 100%
       margin-bottom: 20px
+      +tr
+      &:focus
+        border: solid 1px $pale-rose
       +r(767)
         width: 100%
         margin-right: 0

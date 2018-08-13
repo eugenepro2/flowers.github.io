@@ -10,7 +10,7 @@
       .step-1__block__header
         h4 1 месяц
         .step-1__block__header__content
-          img(src="img/bouquet.png", alt="")
+          i.icon.icon-bouquet
           p 4 доставки букета до двери
       .step-1__block__footer
         p Цена за месяц:
@@ -22,13 +22,13 @@
       .step-1__block__details.details
         p Подарочные сертификаты - на Цветы по подписке номиналом 1 или 3 месяца
       .step-1__block__header
-        h4 1 месяц
+        h4 3 месяца
         .step-1__block__header__content
-          img(src="img/bouquet.png", alt="")
-          p 4 доставки букета до двери
+          i.icon.icon-bouquet
+          p 12 доставок букета до двери
       .step-1__block__footer
-        p Цена за месяц:
-        span 8 500₽
+        p Цена за 3 месяца:
+        span 24 000₽
         b
           | Старая цена: 
           s 25 500₽
@@ -40,14 +40,13 @@
         p Подарочные сертификаты - на Цветы по подписке номиналом 1 или 3 месяца
       h4 Подарочный сертификат
       .step-1__block__header__content
-        img(src="img/present.png", alt="")
+        i.icon.icon-present
         p Выберите <br>время действия:
       .step-1__block__select
         select
           option(value="1") 1 месяц
-          option(value="2") 2 месяца
-          option(value="3") 3 месяца
-      span 8 500₽
+          option(value="2") 3 месяца
+      span 24 000₽
       a(href="step-2.html").btn.btn--secondary Выбрать
 .call-order.modal#call-order
   .call-order__p
@@ -59,8 +58,8 @@
       input(type="text" name="name" placeholder="Имя")
       input(type="tel" name="phone" placeholder="Телефон")
       .form__checkbox
-        input(type="checkbox" name="checkbox" id="checkbox" checked)
-        label(for="checkbox") Я прочитал и согласен 
+        input(type="checkbox" name="checkbox" id="checkbox3")
+        label(for="checkbox3") Я прочитал и согласен 
           a(href="#") с условиями оформления и оплаты заказа 
           | на сайте life4soul.ru
       a(href="#").dispatch.btn.btn--secondary Перезвонить
