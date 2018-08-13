@@ -73,27 +73,27 @@
       margin-bottom: 20px
     tr
       border-bottom: 1px solid $silver
-      display: flex
-      justify-content: space-between
-      align-items: center
       +r(767)
+        display: flex
         flex-direction: column
         align-items: flex-start
       &:last-child
         border-bottom: none
         +r(767)
-          flex-direction: row
+          display: block
       td, th
         font-size: 14px
         color: $black
         max-width: 217px
         padding: 15px 0
         font-weight: 400
+        float: left
         +r(767)
           padding: 10px 0
         &:last-child
           font-size: 20px
           font-weight: 500
+          float: right
           +r(550)
             text-align: right
       th
