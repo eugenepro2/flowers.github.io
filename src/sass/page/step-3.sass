@@ -27,25 +27,28 @@
   &__content
     margin-top: 45px
   &__block
-    background-image: url('../img/step-3.png')
-    background-repeat: no-repeat
+    // background-image: url('../img/step-3.png')
+    // background-repeat: no-repeat
     width: 510px
     padding: 50px 55px
-    box-shadow: 0 20px 43px 0 rgba(230, 233, 240, 0.62)
+    // box-shadow: 0 20px 43px 0 rgba(230, 233, 240, 0.62)
     position: relative
     left: 50%
     transform: translate(-50%)
     margin-bottom: 105px
     +r(550)
-      background: none
       padding: 10px
-      border-radius: 5px
       width: 100%
       margin-bottom: 45px
       &__content
-        border-radius: 5px
-        border: solid 1px #fad0dc
         padding: 20px
+    svg
+      position: absolute
+      top: calc(50% + 20px)
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: -1
+      height: 100%
     h2
       font-size: 14px
       font-weight: 500

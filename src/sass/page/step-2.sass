@@ -155,17 +155,24 @@
     +r(1024)
       flex-direction: column-reverse
   &__info
-    background-image: url('../img/step-2.png')
-    background-size: 240px 100%
+    // background-image: url('../img/step-2.png')
+    // background-size: 240px 100%
     width: 240px
     height: auto
     padding: 30px 50px
-    box-shadow: 0 20px 43px 0 rgba(230, 233, 240, 0.62)
+    position: relative
+    // box-shadow: 0 20px 43px 0 rgba(230, 233, 240, 0.62)
     +r(1024)
       position: relative
       left: 50%
       transform: translate(-50%)
       margin-bottom: 40px
+    svg
+      position: absolute
+      top: calc(50% + 20px)
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: -1
     h2
       font-size: 14px
       font-weight: 500

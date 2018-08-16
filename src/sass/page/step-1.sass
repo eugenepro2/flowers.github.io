@@ -13,6 +13,7 @@
     +r(767)
       padding-left: 0
       margin-bottom: 10px
+      text-transform: uppercase
   h3
     font-size: 14px
     color: $black
@@ -32,6 +33,9 @@
     +r(767)
       max-width: calc(100% - 10px)
       margin-bottom: 65px
+    &:nth-child(2)
+      h4
+        padding-left: 47px
     &--present
       max-width: 240px
       margin-right: 0
@@ -39,6 +43,10 @@
       padding: 22px 35px
       +r(767)
         padding-bottom: 50px
+        h4
+          padding-left: 0 !important
+        i
+          top: 0 !important
       img
         +r(767)
           top: 0 !important
@@ -101,12 +109,15 @@
       margin-bottom: 10px
       +r(767)
         margin-bottom: 0
+        padding-left: 30px
     &__select
       margin-top: 15px
     &__header
       background: $pale-grey
       border-radius: 5px
       padding: 30px
+      +r(767)
+        padding: 30px 45px
       &__content
         +center
         i
