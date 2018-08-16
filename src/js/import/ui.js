@@ -80,8 +80,14 @@ if($(window).width() <= 767) {
   });
 }
 
-let date3 = new Date();
-$('#datepicker').datepicker({
-  minDate: date3
-});
+Date.prototype.addDays = function(days) {
+  var date = new Date(this.valueOf());
+  date.setDate(date.getDate() + days);
+  return date;
+};
+var date = new Date();
 
+
+$('#datepicker').datepicker({
+  minDate: date.addDays(1)
+});
