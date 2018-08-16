@@ -47,6 +47,10 @@
   opacity: 1 !important
   width: 56px
   height: 56px
+  box-shadow: 0 20px 43px 0 rgba(230, 233, 240, 0.62)
+  background: $white
+  border-radius: 100%
+  +center
   +r(767)
     display: none
   i
@@ -54,15 +58,10 @@
     line-height: 1
     color: $pale-rose
     position: relative
-    box-shadow: 0 20px 43px 0 rgba(230, 233, 240, 0.62)
-    // left: 45.45%
-    // top: 45.5%
-    // transform: translate(-50%, -50%)
+    left: 45%
+    top: 45.5%
+    transform: translate(-50%, -50%)
     +tr
-    width: 56px
-    height: 56px
-    background: $white
-    border-radius: 100%
     +center
   &:hover
     i
@@ -86,7 +85,7 @@
       +r(900)
         width: 600px
   i
-    transform: rotate(180deg)
+    transform: rotate(180deg) translate(50%, 50%)
 .swiper-button-prev
   right: 390px
   left: auto
@@ -97,5 +96,4 @@
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
   .swiper-button-next, .swiper-button-prev
     i
-      position: relative
       top: -1px
