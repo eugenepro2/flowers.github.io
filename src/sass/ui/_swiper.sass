@@ -40,7 +40,8 @@
   top: auto
   background: none
   opacity: 1 !important
-  box-shadow: 0 20px 43px 0 rgba(230, 233, 240, 0.62)
+  width: 56px
+  height: 56px
   +r(767)
     display: none
   i
@@ -48,9 +49,10 @@
     line-height: 1
     color: $pale-rose
     position: relative
-    left: 45.45%
-    top: 45.5%
-    transform: translate(-50%, -50%)
+    box-shadow: 0 20px 43px 0 rgba(230, 233, 240, 0.62)
+    // left: 45.45%
+    // top: 45.5%
+    // transform: translate(-50%, -50%)
     +tr
     width: 56px
     height: 56px
@@ -79,7 +81,7 @@
       +r(900)
         width: 600px
   i
-    transform: rotate(180deg) translate(50%, 50%)
+    transform: rotate(180deg)
 .swiper-button-prev
   right: 390px
   left: auto

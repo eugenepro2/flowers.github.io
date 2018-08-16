@@ -36,12 +36,13 @@ label
   border-radius: 100%
   height: 29px
   width: 29px
-  &:hover
-    i
-      color: #fc98b4
-    & + .details, .details:hover
-      visibility: visible
-      opacity: 1
+  +rmin(768)
+    &:hover
+      i
+        color: #fc98b4
+      & + .details, .details:hover
+        visibility: visible
+        opacity: 1
   i
     color: $pale-rose
     font-size: 30px
@@ -49,8 +50,12 @@ label
     border-radius: 100%
     +tr
 .details:hover
-  visibility: visible
-  opacity: 1
+  +rmin(768)
+    visibility: visible
+    opacity: 1
+.details.active
+  visibility: visible !important
+  opacity: 1 !important
 
 
 .btn

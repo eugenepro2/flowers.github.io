@@ -69,3 +69,19 @@ var autocomplete = new google.maps.places.Autocomplete(document.getElementById('
   // componentRestrictions: {country: 'ru'}
   componentRestrictions: {}
 });
+
+
+
+//i
+
+if($(window).width() <= 767) {
+  $('.i').on('click', function() {
+    $(this).siblings('.details').toggleClass('active');
+  });
+}
+
+let date3 = new Date();
+$('#datepicker').datepicker({
+  minDate: date3
+});
+
