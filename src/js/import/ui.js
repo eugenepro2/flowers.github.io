@@ -14,11 +14,19 @@ $('.min').on('click', function() {
   let min = $(this).attr('data-sum');
   $('.sum').text(min + '₽');
   $('.sum-month').text((min * 4) + '₽/месяц');
+  $('.swiper-intro .maxi').fadeOut();
+  setTimeout(function() {
+    $('.swiper-intro .mini').fadeIn();
+  }, 300);
 });
 $('.max').on('click', function() {
   let max = $(this).attr('data-sum');
   $('.sum').text(max + '₽');
   $('.sum-month').text((max * 4) + '₽/месяц');
+  $('.swiper-intro .mini').fadeOut();
+  setTimeout(function() {
+    $('.swiper-intro .maxi').fadeIn();
+  }, 300);
 });
 
 

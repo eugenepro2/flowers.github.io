@@ -3,8 +3,12 @@ section.intro
     h1 Авторские букеты для любимых
   .swiper-container.swiper-intro.hidden-xs
     .swiper-wrapper
-      .swiper-slide(style="background-image: url('img/intro__img-1.png')")
-      .swiper-slide(style="background-image: url('img/intro__img-1.png')")
+      .swiper-slide
+        .mini(style="background-image: url('img/intro__img-1.png')")
+        .maxi(style="background-image: url('img/intro__img-1.png')")
+      .swiper-slide
+        .mini(style="background-image: url('img/intro__img-1.png')")
+        .maxi(style="background-image: url('img/intro__img-1.png')")
     .container
       .swiper-button-next.swiper-intro-next
         i.icon.icon-left-arrow
@@ -25,18 +29,41 @@ section.intro
         .swiper-container.swiper-intro.hidden-sm.hidden-md
           .swiper-wrapper
             .swiper-slide
-              .slide__img
-                img(src="img/intro__mob__img-1.png", alt="")
+              .mini
+                .slide__img
+                  img(src="img/intro__mob__img-1.png", alt="")
+                p mini
+              .maxi
+                .slide__img
+                  img(src="img/intro__mob__img-1.png", alt="")
+                p maxi
             .swiper-slide
-              .slide__img
-                img(src="img/intro__mob__img-1.png", alt="")
-              p maxi
+              .mini
+                .slide__img
+                  img(src="img/intro__mob__img-1.png", alt="")
+                p mini
+              .maxi
+                .slide__img
+                  img(src="img/intro__mob__img-1.png", alt="")
+                p maxi
             .swiper-slide
-              .slide__img
-                img(src="img/intro__mob__img-1.png", alt="")
+              .mini
+                .slide__img
+                  img(src="img/intro__mob__img-1.png", alt="")
+                p mini
+              .maxi
+                .slide__img
+                  img(src="img/intro__mob__img-1.png", alt="")
+                p maxi
             .swiper-slide
-              .slide__img
-                img(src="img/intro__mob__img-1.png", alt="")
+              .mini
+                .slide__img
+                  img(src="img/intro__mob__img-1.png", alt="")
+                p mini
+              .maxi
+                .slide__img
+                  img(src="img/intro__mob__img-1.png", alt="")
+                p maxi
         p Выберите размер букета:
         .intro__block__radio
           input(type="radio" name="radio" id="radio")
