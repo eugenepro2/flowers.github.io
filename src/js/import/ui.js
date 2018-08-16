@@ -25,9 +25,9 @@ $('.max').on('click', function() {
 
 //menu open
 $('.menu-open').on('click', function() {
-  console.log('jjl');
-  $(this).toggleClass('active');
+  $('.menu-open').toggleClass('active');
   $('.header').toggleClass('active');
+  window.scrollTo(0, 0);
   setTimeout(function() {
     if($('.menu-open').attr('rel') === 'modal:open') {
       $('.menu-open').attr('rel', 'modal:close');
@@ -35,6 +35,7 @@ $('.menu-open').on('click', function() {
     } else {
       $('.menu-open').attr('rel', 'modal:open');
       $('.menu-open').attr('href', '#call-order');
+      $('body').css({'overflow' : 'visible'});
     }
   }, 500);
 
