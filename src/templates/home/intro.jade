@@ -1,19 +1,29 @@
 section.intro
   .container
     h1 Авторские букеты для любимых
-  .swiper-container.swiper-intro.hidden-xs
-    .swiper-wrapper
-      .swiper-slide
-        .mini(style="background-image: url('img/intro__img-1.jpg')")
-        .maxi(style="background-image: url('img/intro__img-1.jpg')")
-      .swiper-slide
-        .mini(style="background-image: url('img/intro__img-1.jpg')")
-        .maxi(style="background-image: url('img/intro__img-1.jpg')")
-    .container
-      .swiper-button-next.swiper-intro-next
-        i.icon.icon-left-arrow
-      .swiper-button-prev.swiper-intro-prev
-        i.icon.icon-left-arrow
+  .swiper
+    .swiper-container.swiper-intro.hidden-xs
+      .swiper-wrapper
+        .swiper-slide
+          div(style="background-image: url('img/intro__img-1.jpg')")
+        .swiper-slide
+          div(style="background-image: url('img/intro__img-1.jpg')")
+      .container
+        .swiper-button-next.swiper-intro-next
+          i.icon.icon-left-arrow
+        .swiper-button-prev.swiper-intro-prev
+          i.icon.icon-left-arrow
+    .swiper-container.swiper-intro-max.hidden-xs
+      .swiper-wrapper
+        .swiper-slide
+          div(style="background-image: url('img/intro__img-1.jpg')")
+        .swiper-slide
+          div(style="background-image: url('img/intro__img-1.jpg')")
+      .container
+        .swiper-button-next.swiper-intro-max-next
+          i.icon.icon-left-arrow
+        .swiper-button-prev.swiper-intro-max-prev
+          i.icon.icon-left-arrow
   .container
     .intro__block
       +inro-mask
@@ -26,41 +36,24 @@ section.intro
             p Букет MAXI cостоит из 15-20 бутонов
           h2 Оформите абонемент
           h3 на еженедельную доставку цветов 
-        .swiper-container.swiper-intro.hidden-sm.hidden-md
-          .swiper-wrapper
-            .swiper-slide
-              .mini
+        .swiper.hidden-sm.hidden-md
+          .swiper-container.swiper-intro
+            .swiper-wrapper
+              .swiper-slide
                 .slide__img
                   img(src="img/intro__mob__img-1.png", alt="")
                 p mini
-              .maxi
+              .swiper-slide
+                .slide__img
+                  img(src="img/intro__mob__img-1.png", alt="")
+                p mini
+          .swiper-container.swiper-intro-max
+            .swiper-wrapper
+              .swiper-slide
                 .slide__img
                   img(src="img/intro__mob__img-1.png", alt="")
                 p maxi
-            .swiper-slide
-              .mini
-                .slide__img
-                  img(src="img/intro__mob__img-1.png", alt="")
-                p mini
-              .maxi
-                .slide__img
-                  img(src="img/intro__mob__img-1.png", alt="")
-                p maxi
-            .swiper-slide
-              .mini
-                .slide__img
-                  img(src="img/intro__mob__img-1.png", alt="")
-                p mini
-              .maxi
-                .slide__img
-                  img(src="img/intro__mob__img-1.png", alt="")
-                p maxi
-            .swiper-slide
-              .mini
-                .slide__img
-                  img(src="img/intro__mob__img-1.png", alt="")
-                p mini
-              .maxi
+              .swiper-slide
                 .slide__img
                   img(src="img/intro__mob__img-1.png", alt="")
                 p maxi

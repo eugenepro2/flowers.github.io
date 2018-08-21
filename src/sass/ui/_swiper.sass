@@ -1,22 +1,25 @@
-.swiper-intro
+.swiper
   height: 540px
   +r(767)
-    overflow: visible
+    height: 220px
     padding: 0 10px
     padding-top: 30px
-    height: 220px
+.swiper-intro
+  display: none
+.swiper-intro, .swiper-intro-max
+  height: 100%
+  +r(767)
+    overflow: visible
   .container
     position: relative
 .swiper-slide
-  .mini, .maxi
+  div
     background-repeat: no-repeat
     background-size: cover
     background-position: 50% 50%
     position: relative
     width: 100%
     height: 100%
-  .mini
-    display: none
   .slide__img
     overflow: hidden
     height: 190px
