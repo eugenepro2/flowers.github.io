@@ -11,47 +11,10 @@ $('.phone').mask('+7 (999) 999-9999');
 
 
 
-//home-shares
-var swiper = new Swiper('.swiper-intro', {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  navigation: {
-    nextEl: '.swiper-intro-next',
-    prevEl: '.swiper-intro-prev',
-  },
-  breakpoints: {
-    767: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      loop: true
-    }
-  }
-});
-
-//home-shares
-var swiper1 = new Swiper('.swiper-intro-max', {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  navigation: {
-    nextEl: '.swiper-intro-max-next',
-    prevEl: '.swiper-intro-max-prev',
-  },
-  breakpoints: {
-    767: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      loop: true
-    }
-  }
-});
-
-
-
-
 
 
 //min - max
-$('.min').on('click', function(event) {
+$('.min').on('click', function() {
   let min = $(this).attr('data-sum');
   $('.sum').text(min + '₽');
   $('.sum-month').text((min * 4) + '₽/месяц');
@@ -59,9 +22,8 @@ $('.min').on('click', function(event) {
   setTimeout(function() {
     $('.swiper-intro').fadeIn();
   }, 400);
-  swiper.update();
 });
-$('.max').on('click', function(event) {
+$('.max').on('click', function() {
   let max = $(this).attr('data-sum');
   $('.sum').text(max + '₽');
   $('.sum-month').text((max * 4) + '₽/месяц');
@@ -69,7 +31,6 @@ $('.max').on('click', function(event) {
   setTimeout(function() {
     $('.swiper-intro-max').fadeIn();
   }, 400);
-  swiper1.update();
 });
 
 
