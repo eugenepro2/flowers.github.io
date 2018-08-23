@@ -108,3 +108,14 @@ var date = new Date();
 $('#datepicker').datepicker({
   minDate: date.addDays(1)
 });
+
+
+
+$('.form .form__checkbox input').on('change', function() {
+  let label = $(this).closest('.form__checkbox').find('label');
+  if($(this).is(':checked')) {
+    label.addClass('active');
+  } else {
+    label.removeClass('active');
+  }
+});

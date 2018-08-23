@@ -89,30 +89,30 @@
       margin-top: 10px
       input
         display: none
-        & + label
-          font-size: 12px
-          font-weight: normal
+      label
+        font-size: 12px
+        font-weight: normal
+        color: $cool-grey
+        position: relative
+        padding-left: 50px
+        display: block
+        a
+          text-decoration: underline
           color: $cool-grey
-          position: relative
-          padding-left: 50px
-          display: block
-          a
-            text-decoration: underline
-            color: $cool-grey
-          &:before
-            content: ''
-            width: 17px
-            height: 17px
-            border-radius: 100%
-            +center
-            position: absolute
-            left: 15px
-            top: 0
-            font-family: 'iconfont'
-            color: $white
-            border: 1px solid $pale-rose
-            +tr
-        &:checked + label:before
+        &:before
+          content: ''
+          width: 17px
+          height: 17px
+          border-radius: 100%
+          +center
+          position: absolute
+          left: 15px
+          top: 0
+          font-family: 'iconfont'
+          color: $white
+          border: 1px solid $pale-rose
+          +tr
+        &.active:before
           content: $icon-check-mark
           color: $pale-rose
           font-size: 17px
