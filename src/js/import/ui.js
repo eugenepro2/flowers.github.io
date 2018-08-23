@@ -11,29 +11,32 @@ $('.phone').mask('+7 (999) 999-9999');
 
 
 
-
+$('.intro__block__radio label').each(function() {
+  if($(this).hasClass('active')) {
+    minMax($(this));
+  }
+});
 
 //min - max
+//min - max
 $('.min').on('click', function() {
-  let minSum = $(this).attr('data-sum');
-  let minTotal = $(this).attr('data-total');
-  $('.sum').text(minSum + '₽');
-  $('.sum-month').text(minTotal + '₽/месяц');
-  $('.swiper-intro-max').fadeOut();
-  setTimeout(function() {
-    $('.swiper-intro').fadeIn();
-  }, 400);
+  minMax($(this));
 });
 $('.max').on('click', function() {
-  let maxSum = $(this).attr('data-sum');
-  let maxTotal = $(this).attr('data-total');
-  $('.sum').text(maxSum + '₽');
-  $('.sum-month').text(maxTotal + '₽/месяц');
-  $('.swiper-intro').fadeOut();
-  setTimeout(function() {
-    $('.swiper-intro-max').fadeIn();
-  }, 400);
+  minMax($(this));
 });
+ 
+function minMax(curr) {
+  let sum = curr.attr('data-sum');
+  let total = curr.attr('data-total');
+  let slider = curr.attr('data-slider');
+  $('.sum').text(sum + '₽');
+  $('.sum-month').text(total + '₽/месяц');
+  $('.swiper-container').fadeOut();
+  setTimeout(function() {
+    $(slider).fadeIn();
+  }, 400);
+}
 
 
 

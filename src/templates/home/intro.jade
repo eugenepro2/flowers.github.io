@@ -60,9 +60,9 @@ section.intro
         p Выберите размер букета:
         .intro__block__radio
           input(type="radio" name="radio" id="radio")
-          label(for="radio" data-sum="600" data-total="2400").min mini
-          input(type="radio" name="radio" id="radio1" checked)
-          label(for="radio1" data-sum="1200" data-total="4800").max maxi
+          label(for="radio" data-sum="600" data-total="2400" data-slider=".swiper-intro" checked).active.min mini
+          input(type="radio" name="radio" id="radio1")
+          label(for="radio1" data-sum="1200" data-total="4800" data-slider=".swiper-intro-max").max maxi
         b за букет 
         span.sum 1200₽
         b.sum-month 4800₽/месяц
