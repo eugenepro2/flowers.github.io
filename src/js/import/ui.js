@@ -10,7 +10,10 @@ $('select').selectize();
 
 $('.step-1__block__select select').on('change', function() {
   let val = $(this).children('option').val();
+  let optionText = $(this).children('option').text();
   $('.step-1__block--present span').text(val + '₽');
+  $('.form__certificate .month').val(optionText);
+  $('.form__certificate .price').val(val);
 });
 
 
@@ -131,7 +134,9 @@ var date = new Date();
 $('#datepicker').datepicker({
   minDate: date.addDays(1)
 });
-
+var dateNev = new Date();
+dateNev.format('dd.mm.yyyy');
+$('.form__datepicker input').attr('placeholder', dateNev);
 
 
 $('.form .form__checkbox input').on('change', function() {
