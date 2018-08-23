@@ -6,15 +6,19 @@ import Swiper from 'swiper';
 
 
 //select
-$('select').selectize();
+let select = $('select').selectize();
 
-$(window).on('load', function() {
+select.on('initialize', function() {
   let val = $('.step-1__block__select select').children('option').val();
   let optionText = $('.step-1__block__select select').children('option').text();
   $('.step-1__block--present span').text(val + '₽');
   $('.form__certificate .month').val(optionText);
   $('.form__certificate .price').val(val);
 });
+
+
+ 
+
 
 
 
