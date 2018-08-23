@@ -15,18 +15,20 @@ $('.phone').mask('+7 (999) 999-9999');
 
 //min - max
 $('.min').on('click', function() {
-  let min = $(this).attr('data-sum');
-  $('.sum').text(min + '₽');
-  $('.sum-month').text((min * 4) + '₽/месяц');
+  let minSum = $(this).attr('data-sum');
+  let minTotal = $(this).attr('data-total');
+  $('.sum').text(minSum + '₽');
+  $('.sum-month').text(minTotal + '₽/месяц');
   $('.swiper-intro-max').fadeOut();
   setTimeout(function() {
     $('.swiper-intro').fadeIn();
   }, 400);
 });
 $('.max').on('click', function() {
-  let max = $(this).attr('data-sum');
-  $('.sum').text(max + '₽');
-  $('.sum-month').text((max * 4) + '₽/месяц');
+  let maxSum = $(this).attr('data-sum');
+  let maxTotal = $(this).attr('data-total');
+  $('.sum').text(maxSum + '₽');
+  $('.sum-month').text(maxTotal + '₽/месяц');
   $('.swiper-intro').fadeOut();
   setTimeout(function() {
     $('.swiper-intro-max').fadeIn();
