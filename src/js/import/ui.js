@@ -5,25 +5,50 @@ import datapicker from 'air-datepicker';
 import Swiper from 'swiper';
 
 
+//select
+$('select').selectize();
+
+$('.step-1__block__select select').on('change', function() {
+  let val = $(this).children('option').val();
+  $('.step-1__block--present span').text(val + '₽');
+});
+
+
+
+
 //maskedinput
 $('.phone').mask('+7 (999) 999-9999');
 
 
 
-
+//min - max
 $('.intro__block__radio label').each(function() {
   if($(this).hasClass('active')) {
     minMax($(this));
   }
 });
 
-//min - max
-//min - max
 $('.min').on('click', function() {
   minMax($(this));
+  if($(window).width() <= 1024) {
+    let linkMob = $(this).attr('data-href-mini');
+    $('.intro__block__content .btn');
+    $('.intro__block__content .btn').attr('href', linkMob);
+  } else {
+    let linkDesc = $(this).attr('data-modal-mini');
+    $('.intro__block__content .btn').attr('href', linkDesc);
+  }
 });
 $('.max').on('click', function() {
   minMax($(this));
+  if($(window).width() <= 1024) {
+    let linkMob = $(this).attr('data-href-maxi');
+    $('.intro__block__content .btn');
+    $('.intro__block__content .btn').attr('href', linkMob);
+  } else {
+    let linkDesc = $(this).attr('data-modal-maxi');
+    $('.intro__block__content .btn').attr('href', linkDesc);
+  }
 });
  
 function minMax(curr) {
@@ -58,8 +83,6 @@ $('.menu-open').on('click', function() {
 
 });
 
-//select
-$('select').selectize();
 
 
 
