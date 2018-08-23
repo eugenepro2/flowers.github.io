@@ -11,7 +11,7 @@ $('select').selectize();
 
 $(window).on('load', function() {
   let val = $('.step-1__block__select select').children('option').val();
-  let optionText = $('.step-1__block__select select').children('option').text();
+  let optionText = $('.step-1__block__select select').first('option').text();
   console.log(optionText);
   $('.step-1__block--present span').text(val + '₽');
   $('.form__certificate .month').val(optionText);
