@@ -8,10 +8,14 @@ import Swiper from 'swiper';
 //select
 $('select').selectize();
 
+$(window).on('load', function() {
+  let val = $('.step-1__block__select select').children('option').val();
+  let optionText = $('.step-1__block__select select').children('option').text();
+  $('.step-1__block--present span').text(val + '₽');
+  $('.form__certificate .month').val(optionText);
+  $('.form__certificate .price').val(val);
+});
 
-let val = $('.step-1__block__select select').children('option').val();
-$('.step-1__block--present span').text(val + '₽');
-$('.form__certificate .price').val(val);
 
 
 $('.step-1__block__select select').on('change', function() {
@@ -143,13 +147,8 @@ $('#datepicker').datepicker({
 
 
 
-
-Date.prototype.format = function(mask, utc) {
-  return dateFormat(this, mask, utc);
-};
-var now = new Date();
  
-$('.form__datepicker input').attr('placeholder', now.format('dd.mm.yyyy'));
+$('.form__datepicker input').attr('placeholder', date.addDays(1));
 
 
 $('.form .form__checkbox input').on('change', function() {
