@@ -4,6 +4,14 @@ import modal from 'jquery-modal';
 import datapicker from 'air-datepicker';
 import Swiper from 'swiper';
 
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+  $('.call-order').height(heightPopUp);
+  $('.call-order__content').fadeOut(400);
+  setTimeout(function() {
+    $('.call-order').addClass('active');
+    $('.call-order__p p').fadeIn();
+  }, 500);
+}, false );
 
 //select
 $('select').selectize();
@@ -159,5 +167,16 @@ $('.form .form__checkbox input').on('change', function() {
     label.addClass('active');
   } else {
     label.removeClass('active');
+  }
+});
+
+
+$('.step-2__content .form__checkbox input').on('change', function() {
+  if ($(this).is(':checked')) {
+    $('.step-2__content .error').fadeOut();
+    $('.step-2__content input[type="submit"]').prop('disabled', false);
+  } else{
+    $('.step-2__content .error').fadeIn();
+    $('.step-2__content input[type="submit"]').prop('disabled', true);
   }
 });
