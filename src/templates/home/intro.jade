@@ -15,12 +15,6 @@ section.intro
         .swiper-slide
           .min-slide(style="background-image: url('img/2.jpg')")
           .max-slide(style="background-image: url('img/1.jpg')")
-    //- .swiper-container.swiper-intro-max.hidden-xs
-    //-   .swiper-wrapper
-    //-     .swiper-slide
-    //-       .max-slide(style="background-image: url('img/1.jpg')")
-    //-     .swiper-slide
-    //-       div(style="background-image: url('img/2.jpg')")
   .container
     .intro__block
       +inro-mask
@@ -37,23 +31,23 @@ section.intro
           .swiper-container.swiper-intro
             .swiper-wrapper
               .swiper-slide
-                .slide__img
-                  img(src="img/intro__mob__img-1.png", alt="")
-                p mini
+                .min-slide
+                  .slide__img
+                    img(src="img/intro__mob__img-1.png", alt="")
+                  p mini
+                .max-slide
+                  .slide__img
+                    img(src="img/intro__mob__img-1.png", alt="")
+                  p maxi
               .swiper-slide
-                .slide__img
-                  img(src="img/intro__mob__img-1.png", alt="")
-                p mini
-          .swiper-container.swiper-intro-max
-            .swiper-wrapper
-              .swiper-slide
-                .slide__img
-                  img(src="img/intro__mob__img-1.png", alt="")
-                p maxi
-              .swiper-slide
-                .slide__img
-                  img(src="img/intro__mob__img-1.png", alt="")
-                p maxi
+                .min-slide
+                  .slide__img
+                    img(src="img/intro__mob__img-1.png", alt="")
+                  p mini
+                .max-slide
+                  .slide__img
+                    img(src="img/intro__mob__img-1.png", alt="")
+                  p maxi
         p Выберите размер букета:
         .intro__block__radio
           input(type="radio" name="radio" id="radio" checked)
