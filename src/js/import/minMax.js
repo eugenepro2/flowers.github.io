@@ -8,6 +8,10 @@ $('.intro__block__radio label').each(function() {
 
 $('.min').on('click', function() {
   minMax($(this));
+  $('.max-slide').fadeOut();
+  setTimeout(function() {
+    $('.min-slide').fadeIn();
+  }, 400);
   if($(window).width() <= 1024) {
     let linkMob = $(this).attr('data-href-mini');
     $('.intro__block__content .btn');
@@ -19,6 +23,10 @@ $('.min').on('click', function() {
 });
 $('.max').on('click', function() {
   minMax($(this));
+  $('.min-slide').fadeOut();
+  setTimeout(function() {
+    $('.max-slide').fadeIn();
+  }, 400);
   if($(window).width() <= 1024) {
     let linkMob = $(this).attr('data-href-maxi');
     $('.intro__block__content .btn');
@@ -35,8 +43,4 @@ function minMax(curr) {
   let slider = curr.attr('data-slider');
   $('.sum').text(sum + '₽');
   $('.sum-month').text(total + '₽/месяц');
-  $('.swiper-container').fadeOut();
-  setTimeout(function() {
-    $(slider).fadeIn();
-  }, 400);
 }

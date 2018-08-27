@@ -10,20 +10,17 @@ section.intro
     .swiper-container.swiper-intro.hidden-xs
       .swiper-wrapper
         .swiper-slide
-          div(style="background-image: url('img/1.jpg')")
+          .min-slide(style="background-image: url('img/1.jpg')")
+          .max-slide(style="background-image: url('img/2.jpg')")
         .swiper-slide
-          div(style="background-image: url('img/2.jpg')")
-    .swiper-container.swiper-intro-max.hidden-xs
-      .swiper-wrapper
-        .swiper-slide
-          div(style="background-image: url('img/1.jpg')")
-        .swiper-slide
-          div(style="background-image: url('img/2.jpg')")
-      //- .container
-      //-   .swiper-button-next.swiper-intro-next
-      //-     i.icon.icon-left-arrow
-      //-   .swiper-button-prev.swiper-intro-prev
-      //-     i.icon.icon-left-arrow
+          .min-slide(style="background-image: url('img/2.jpg')")
+          .max-slide(style="background-image: url('img/1.jpg')")
+    //- .swiper-container.swiper-intro-max.hidden-xs
+    //-   .swiper-wrapper
+    //-     .swiper-slide
+    //-       .max-slide(style="background-image: url('img/1.jpg')")
+    //-     .swiper-slide
+    //-       div(style="background-image: url('img/2.jpg')")
   .container
     .intro__block
       +inro-mask
