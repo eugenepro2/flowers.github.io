@@ -1,33 +1,42 @@
+import $ from 'jquery';
 import '../lib/selectize.min.js';
 import '../lib/maskedinput.js';
 import modal from 'jquery-modal';
-import datapicker from 'air-datepicker';
 import Swiper from 'swiper';
 
-document.addEventListener( 'wpcf7mailsent', function( event ) {
-  $('.call-order').height(heightPopUp);
-  $('.call-order__content').fadeOut(400);
-  setTimeout(function() {
-    $('.call-order').addClass('active');
-    $('.call-order__p p').fadeIn();
-  }, 500);
-}, false );
 
 //select
 $('select').selectize();
 
+//maskedinput
+$('.phone').mask('+7 (999) 999-9999');
 
-$(window).on('load', function() {
-  let val = $('.step-1__block__select select').children('option').val();
-  let optionText = $('.step-1__block__select select').first('option').text();
-  console.log(optionText);
-  $('.step-1__block--present span').text(val + '₽');
-  $('.form__certificate .month').val(optionText);
-  $('.form__certificate .price').val(val);
+//Подтяжка адресса с гугла
+var autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'), {
+  language: 'ru',
+  // componentRestrictions: {country: 'ru'}
+  componentRestrictions: {}
+});
+
+//pop-up
+$('[rel="modal:open"]').on('click', function(event) {
+  $(this).modal({
+    fadeDuration: 200
+  });
+  return false;
 });
 
 
 
+
+//Первый шаг, выбор значения при селекте
+$(window).on('load', function() {
+  let val = $('.step-1__block__select select').children('option').val();
+  let optionText = $('.step-1__block__select select').first('option').text();
+  $('.step-1__block--present span').text(val + '₽');
+  $('.form__certificate .month').val(optionText);
+  $('.form__certificate .price').val(val);
+});
 $('.step-1__block__select select').on('change', function() {
   let val = $(this).children('option').val();
   let optionText = $(this).children('option').text();
@@ -38,68 +47,19 @@ $('.step-1__block__select select').on('change', function() {
 
 
 
-
-//maskedinput
-$('.phone').mask('+7 (999) 999-9999');
-
-
-
-//min - max
-$('.intro__block__radio label').each(function() {
-  if($(this).hasClass('active')) {
-    minMax($(this));
-  }
-});
-
-$('.min').on('click', function() {
-  minMax($(this));
-  if($(window).width() <= 1024) {
-    let linkMob = $(this).attr('data-href-mini');
-    $('.intro__block__content .btn');
-    $('.intro__block__content .btn').attr('href', linkMob);
-  } else {
-    let linkDesc = $(this).attr('data-modal-mini');
-    $('.intro__block__content .btn').attr('href', linkDesc);
-  }
-});
-$('.max').on('click', function() {
-  minMax($(this));
-  if($(window).width() <= 1024) {
-    let linkMob = $(this).attr('data-href-maxi');
-    $('.intro__block__content .btn');
-    $('.intro__block__content .btn').attr('href', linkMob);
-  } else {
-    let linkDesc = $(this).attr('data-modal-maxi');
-    $('.intro__block__content .btn').attr('href', linkDesc);
-  }
-});
- 
-function minMax(curr) {
-  let sum = curr.attr('data-sum');
-  let total = curr.attr('data-total');
-  let slider = curr.attr('data-slider');
-  $('.sum').text(sum + '₽');
-  $('.sum-month').text(total + '₽/месяц');
-  $('.swiper-container').fadeOut();
-  setTimeout(function() {
-    $(slider).fadeIn();
-  }, 400);
-}
-
-
-
 //menu open
-$('.menu-open').on('click', function() {
-  $('.menu-open').toggleClass('active');
+let menu = $('.menu-open');
+menu.on('click', function() {
+  menu.toggleClass('active');
   $('.header').toggleClass('active');
   window.scrollTo(0, 0);
   setTimeout(function() {
-    if($('.menu-open').attr('rel') === 'modal:open') {
-      $('.menu-open').attr('rel', 'modal:close');
-      $('.menu-open').attr('href', '#close-modal');
+    if(menu.attr('rel') === 'modal:open') {
+      menu.attr('rel', 'modal:close');
+      menu.attr('href', '#close-modal');
     } else {
-      $('.menu-open').attr('rel', 'modal:open');
-      $('.menu-open').attr('href', '#call-order');
+      menu.attr('rel', 'modal:open');
+      menu.attr('href', '#call-order');
       $('body').css({'overflow' : 'visible'});
     }
   }, 500);
@@ -118,49 +78,16 @@ $('.dispatch').on('click', function() {
   $('.call-order__p p').fadeIn();
 });
 
-//pop-up
-$('[rel="modal:open"]').on('click', function(event) {
-  $(this).modal({
-    fadeDuration: 200
-  });
-  return false;
-});
 
 
-var autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'), {
-  language: 'ru',
-  // componentRestrictions: {country: 'ru'}
-  componentRestrictions: {}
-});
-
-
-
-//i
-
+//Всплывающий блок информации по нажатию на значек "i"
 if($(window).width() <= 767) {
   $('.i').on('click', function() {
     $(this).siblings('.details').toggleClass('active');
   });
 }
 
-Date.prototype.addDays = function(days) {
-  var date = new Date(this.valueOf());
-  date.setDate(date.getDate() + days);
-  return date;
-};
-var date = new Date();
-
-
-$('#datepicker').datepicker({
-  minDate: date.addDays(1)
-});
-
-
-
- 
-$('.form__datepicker input').attr('placeholder', date.addDays(1));
-
-
+//Стилизованый checkbox
 $('.form .form__checkbox input').on('change', function() {
   let label = $(this).closest('.form__checkbox').find('label');
   if($(this).is(':checked')) {
@@ -170,7 +97,7 @@ $('.form .form__checkbox input').on('change', function() {
   }
 });
 
-
+//Ошибка если не выбран checkbox на втором шаге
 $('.step-2__content .form__checkbox input').on('change', function() {
   if ($(this).is(':checked')) {
     $('.step-2__content .error').fadeOut();
