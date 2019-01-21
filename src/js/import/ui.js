@@ -31,18 +31,20 @@ $('[rel="modal:open"]').on('click', function(event) {
 
 //Первый шаг, выбор значения при селекте
 $(window).on('load', function() {
-  let val = $('.step-1__block__select select').children('option').val();
-  let optionText = $('.step-1__block__select select').first('option').text();
-  $('.step-1__block--present span').text(val + '₽');
-  $('.form__certificate .month').val(optionText);
-  $('.form__certificate .price').val(val);
+  $('.step-1__block__select select').each(function() {
+    let val = $(this).children('option').val();
+    let optionText = $(this).first('option').text();
+    $(this).closest('.step-1__block').find('.form__certificate .month').val(optionText);
+    $(this).closest('.step-1__block').find('.form__certificate .price').val(val);
+    $(this).closest('.step-1__block').find('span').text(val + '₽');
+  });
 });
 $('.step-1__block__select select').on('change', function() {
   let val = $(this).children('option').val();
   let optionText = $(this).children('option').text();
-  $('.step-1__block--present span').text(val + '₽');
-  $('.form__certificate .month').val(optionText);
-  $('.form__certificate .price').val(val);
+  $(this).closest('.step-1__block').find('.form__certificate .month').val(optionText);
+  $(this).closest('.step-1__block').find('.form__certificate .price').val(val);
+  $(this).closest('.step-1__block').find('span').text(val + '₽');
 });
 
 
@@ -57,10 +59,12 @@ menu.on('click', function() {
     if(menu.attr('rel') === 'modal:open') {
       menu.attr('rel', 'modal:close');
       menu.attr('href', '#close-modal');
+      $('body').css({'position' : 'fixed'});
     } else {
       menu.attr('rel', 'modal:open');
       menu.attr('href', '#call-order');
       $('body').css({'overflow' : 'visible'});
+      $('body').css({'position' : 'static'});
     }
   }, 500);
 
@@ -82,6 +86,16 @@ $('.dispatch').on('click', function() {
 
 //Всплывающий блок информации по нажатию на значек "i"
 if($(window).width() <= 767) {
+  $(document).on({ 'touchstart' : function() { 
+    $('.details').removeClass('active'); // скрываем его
+  } });
+  $(document).on('click', function(e) {
+    var div = $('.i'); // тут указываем ID элемента
+    if (!div.is(e.target) // если клик был не по нашему блоку
+		    && div.has(e.target).length === 0) { // и не по его дочерним элементам
+      $('.details').removeClass('active'); // скрываем его
+    }
+  });
   $('.i').on('click', function() {
     $(this).siblings('.details').toggleClass('active');
   });

@@ -1,162 +1,171 @@
 .info
-  padding-top: 45px
-  +r(1040)
-    padding-top: 110px
-  +r(767)
-    padding-top: 40px
-  &__content
-    padding-bottom: 95px
-    +r(767)
-      padding-bottom: 35px
-  &__video
-    +center
-    justify-content: flex-start
-    text-align: left
-    margin-bottom: 45px
-    font-size: 14px
-    font-weight: 500
-    color: $steel-grey
-    &:hover
-      i
-        color: #b5b9c5
-    +r(767)
-      justify-content: center
-      margin-bottom: 35px
-    i
-      font-size: 60px
-      color: $steel-grey
-      margin-right: 15px
-      +tr
-  h2
-    font-size: 44px
-    font-weight: 400
-    font-style: normal
-    letter-spacing: 4.4px
-    text-align: right
-    text-transform: uppercase
-    color: $black
-    margin-bottom: 45px
-    +r(767)
-      text-align: center
-      font-size: 21px
-      margin-bottom: 25px
-      letter-spacing: 2.1px
-  &__block
-    border-radius: 5px
-    background-color: $white
-    box-shadow: 0 20px 43px 0 rgba(230, 233, 240, 0.62)
-    padding: 10px
-    position: relative
-    width: calc(100% - 15px)
-    margin-right: 15px
-    +r(767)
-      width: 100%
-      margin-right: 0
-      margin-bottom: 30px
-    &__content
-      +r(767)
-        height: 100%
-      &--secondary
-        .details
-          left: 54%
-          width: 315px
-          +r(767)
-            width: 240px
-            bottom: 0
-            top: auto
-        .info__block__details__text
-          padding-left: 16px
-          p
-            margin-bottom: 10px !important
-        +r(767)
-          p
-            padding-bottom: 40px !important
-      p
-        border-radius: 5px
-        border: solid 1px #fad0dc
-        font-size: 18px
-        +center
-        color: $black
-        height: 75px
-        text-align: center
-        font-weight: normal
-        +r(767)
-          font-size: 14px
-          height: 100%
-          padding: 15px 10px
-          flex-direction: column
-          font-weight: 500
-          span
-            font-weight: 400
-      .i
-        top: 55%
-        transform: translate(0, -50%)
-        right: -5px
-        +r(767)
-          transform: none
-          top: -7px
-          right: 20px
-      .btn
-        +r(767)
-          position: absolute
-          left: 50%
-          transform: translate(-50%)
-          bottom: -23px
-          font-size: 14px
-          width: 89%
-          +center
-          padding: 20px 0
-    &__details
-      position: absolute
-      top: 80px
-      left: 75%
-      transform: translate(-50%)
-      width: 215px
-      background: #E9EBF2
-      +center
-      padding: 10px
-      border-radius: 3px
-      z-index: 2
-      opacity: 0
-      visibility: hidden
-      +tr
-      .btn
-        +r(767)
-          bottom: -25px
-          padding: 10px 20px
-      &:before
-        content: ''
-        position: absolute
-        top: -7.5px
-        right: 50px
-        border-left: 8px solid transparent
-        border-bottom: 8px solid #E9EBF2
-        border-right: 8px solid transparent
-        display: block
-        +r(767)
-          right: 23px
-      &__img
-        height: 100px
-        width: 100px
-        border-radius: 3px
-        overflow: hidden
-        +r(767)
-          height: 50px
-          width: 50px
-        img
-          +object-fit(cover)
-          width: 100%
-          height: 100%
-      &__text
-        flex: 1
-        p
-          font-size: 11px
-          font-weight: normal
-          font-style: italic
-          color: $gunmetal
-          height: auto
-          border: none
-          text-align: left
-          +r(767)
-            font-size: 10px
-            padding-bottom: 0 !important
+	padding-top: 45px
+	+r(1040)
+		padding-top: 110px
+	+r(767)
+		padding-top: 40px
+	&__content
+		padding-bottom: 95px
+		+r(767)
+			padding-bottom: 35px
+	&__video
+		+center
+		justify-content: flex-start
+		text-align: left
+		margin-bottom: 45px
+		font-size: 14px
+		font-weight: 500
+		color: $steel-grey
+		&:hover
+			i
+				color: #b5b9c5
+		+r(767)
+			justify-content: center
+			margin-bottom: 35px
+		i
+			font-size: 60px
+			color: $steel-grey
+			margin-right: 15px
+			+tr
+	h2
+		font-size: 44px
+		font-weight: 400
+		font-style: normal
+		letter-spacing: 4.4px
+		text-align: right
+		text-transform: uppercase
+		color: $black
+		margin-bottom: 45px
+		+r(767)
+			text-align: center
+			font-size: 21px
+			margin-bottom: 25px
+			letter-spacing: 2.1px
+	&__block
+		border-radius: 5px
+		background-color: $white
+		box-shadow: 0 20px 43px 0 rgba(230, 233, 240, 0.62)
+		padding: 10px
+		position: relative
+		width: calc(100% - 15px)
+		margin-right: 15px
+		+r(767)
+			width: 100%
+			margin-right: 0
+			margin-bottom: 30px
+		&__content
+			+r(767)
+				height: 100%
+			&--secondary
+				.details
+					left: 46%
+					top: -96%
+					width: 175px
+					display: flex
+					flex-direction: column
+					+r(767)
+						left: 43%
+						width: 180px
+						bottom: 0
+						top: auto
+				.info__block__details__text
+					p
+						margin-bottom: 10px !important
+				+r(767)
+					p
+						padding-bottom: 40px !important
+			p
+				border-radius: 5px
+				border: solid 1px #fad0dc
+				font-size: 18px
+				+center
+				color: $black
+				height: 75px
+				text-align: center
+				font-weight: normal
+				+r(767)
+					font-size: 14px
+					height: 100%
+					padding: 15px 10px
+					flex-direction: column
+					font-weight: 500
+					span
+						font-weight: 400
+			.i
+				top: 55%
+				transform: translate(0, -50%)
+				right: -5px
+				+r(767)
+					transform: none
+					top: -7px
+					right: 20px
+			.btn
+				+r(767)
+					position: absolute
+					left: 50%
+					transform: translate(-50%)
+					bottom: -23px
+					font-size: 14px
+					width: 89%
+					+center
+					padding: 20px 0
+		&__details
+			position: absolute
+			top: 22px
+			left: 40%
+			transform: translate(-50%)
+			width: 215px
+			background: #E9EBF2
+			+center
+			padding: 10px
+			border-radius: 3px
+			z-index: 2
+			opacity: 0
+			visibility: hidden
+			+tr
+			.btn
+				+r(767)
+					bottom: -25px
+					padding: 10px 20px
+					display: none
+			&:before
+				content: ''
+				position: absolute
+				top: 50%
+				right: -10px
+				transform: translateY(-50%)
+				border-style: solid
+				border-width: 8px 0 8px 20px
+				border-color: transparent transparent transparent #E9EBF2
+				display: block
+				+r(767)
+					right: -10px
+			&__img
+				height: 155px
+				width: 155px
+				border-radius: 3px
+				overflow: hidden
+				margin-bottom: 10px
+				+r(767)
+					height: 150px
+					width: 150px
+					margin-bottom: 0
+				img
+					+object-fit(cover)
+					width: 100%
+					height: 100%
+			&__text
+				flex: 1
+				.btn--secondary
+					padding: 12px 15px
+				p
+					font-size: 11px
+					font-weight: normal
+					font-style: italic
+					color: $gunmetal
+					height: auto
+					border: none
+					text-align: left
+					+r(767)
+						font-size: 10px
+						padding-bottom: 0 !important
